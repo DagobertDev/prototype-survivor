@@ -22,5 +22,15 @@ shape = SubResource("RectangleShape2D_68m0s")
 [node name="Sprite" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_dxojo")
 
+[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D"]
+self_modulate = Color(1, 0, 0, 1)
+offset_left = -32.0
+offset_top = -74.0
+offset_right = 32.0
+offset_bottom = -64.0
+show_percentage = false
+
 [node name="Enemy" parent="." instance=ExtResource("3_wvibl")]
 position = Vector2(116, 78)
+
+[connection signal="CurrentHealthChanged" from="CharacterBody2D" to="CharacterBody2D/HealthBar" method="set_value"]
