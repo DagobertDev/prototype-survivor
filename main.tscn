@@ -9,20 +9,20 @@ size = Vector2(64, 128)
 
 [node name="Main" type="Node"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
 motion_mode = 1
 script = ExtResource("1_jguyb")
 Speed = 300.0
 
-[node name="CollisionShape" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_68m0s")
 
-[node name="Camera" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera" type="Camera2D" parent="Player"]
 
-[node name="Sprite" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_dxojo")
 
-[node name="HealthBar" type="ProgressBar" parent="CharacterBody2D"]
+[node name="HealthBar" type="ProgressBar" parent="Player"]
 self_modulate = Color(1, 0, 0, 1)
 offset_left = -32.0
 offset_top = -74.0
@@ -33,4 +33,4 @@ show_percentage = false
 [node name="Enemy" parent="." instance=ExtResource("3_wvibl")]
 position = Vector2(116, 78)
 
-[connection signal="CurrentHealthChanged" from="CharacterBody2D" to="CharacterBody2D/HealthBar" method="set_value"]
+[connection signal="CurrentHealthChanged" from="Player" to="Player/HealthBar" method="set_value"]
