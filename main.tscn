@@ -23,3 +23,4 @@ shape = SubResource("RectangleShape2D_68m0s")
 texture = ExtResource("1_dxojo")
 
 [node name="Enemy" parent="." instance=ExtResource("3_wvibl")]
+position = Vector2(116, 78)

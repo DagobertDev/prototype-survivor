@@ -12,5 +12,4 @@ motion_mode = 1
 shape = SubResource("RectangleShape2D_5l4rk")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(215, 97)
 texture = ExtResource("1_jmsh8")
