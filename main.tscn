@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhctli1vyshn8"]
+[gd_scene load_steps=5 format=3 uid="uid://bhctli1vyshn8"]
 
 [ext_resource type="Texture2D" uid="uid://lia66wpbvumo" path="res://player.png" id="1_dxojo"]
 [ext_resource type="Script" path="res://Player.cs" id="1_jguyb"]
+[ext_resource type="PackedScene" uid="uid://cv72h1v8dn725" path="res://enemy.tscn" id="3_wvibl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68m0s"]
 size = Vector2(64, 128)
@@ -20,3 +21,5 @@ shape = SubResource("RectangleShape2D_68m0s")
 
 [node name="Sprite" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_dxojo")
+
+[node name="Enemy" parent="." instance=ExtResource("3_wvibl")]
