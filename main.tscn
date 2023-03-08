@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhctli1vyshn8"]
+[gd_scene load_steps=6 format=3 uid="uid://bhctli1vyshn8"]
 
 [ext_resource type="Texture2D" uid="uid://lia66wpbvumo" path="res://player.png" id="1_dxojo"]
 [ext_resource type="Script" path="res://Player.cs" id="1_jguyb"]
 [ext_resource type="PackedScene" uid="uid://cv72h1v8dn725" path="res://enemy.tscn" id="3_wvibl"]
+[ext_resource type="Script" path="res://Spawner.cs" id="4_5phv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68m0s"]
 size = Vector2(64, 128)
@@ -30,7 +31,12 @@ offset_right = 32.0
 offset_bottom = -64.0
 show_percentage = false
 
-[node name="Enemy" parent="." instance=ExtResource("3_wvibl")]
-position = Vector2(116, 78)
+[node name="Spawner" type="Node" parent="."]
+script = ExtResource("4_5phv8")
+EnemyScene = ExtResource("3_wvibl")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+autostart = true
 
 [connection signal="CurrentHealthChanged" from="Player" to="Player/HealthBar" method="set_value"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="SpawnEnemy"]
