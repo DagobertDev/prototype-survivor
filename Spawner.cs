@@ -1,5 +1,7 @@
 using Godot;
 
+namespace PrototypeSurvivor;
+
 public partial class Spawner : Node
 {
     [Export]

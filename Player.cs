@@ -15,15 +15,15 @@ public partial class Player : CharacterBody2D
 
     public int CurrentHealth
     {
-        get => this.currentHealth;
+        get => _currentHealth;
         private set
         {
-            this.currentHealth = value;
+            _currentHealth = value;
             EmitSignal(SignalName.CurrentHealthChanged, CurrentHealth);
         }
     }
 
-    private int currentHealth;
+    private int _currentHealth;
 
     public override void _Ready()
     {
