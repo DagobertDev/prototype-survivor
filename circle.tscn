@@ -10,8 +10,9 @@ radius = 16.0
 script = ExtResource("1_lv0os")
 RotationSpeed = 100
 Radius = 200
+PushBackDistance = 100
 
-[node name="Circle" type="CharacterBody2D" parent="."]
+[node name="Circle" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Circle"]
 shape = SubResource("CircleShape2D_i4m7c")
