@@ -17,3 +17,8 @@ shape = SubResource("RectangleShape2D_5l4rk")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_jmsh8")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="UpdateDestination"]
