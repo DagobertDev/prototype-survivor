@@ -6,10 +6,10 @@ public partial class Circle : Node2D
 {
 	[Export]
 	public int RotationSpeed { get; set; }
-	
+
 	[Export]
 	public int Radius { get; set; }
-	
+
 	[Export]
 	public int PushBackDistance { get; set; }
 
