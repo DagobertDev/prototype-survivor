@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhctli1vyshn8"]
+[gd_scene load_steps=7 format=3 uid="uid://b4spwg23np1wd"]
 
-[ext_resource type="Texture2D" uid="uid://lia66wpbvumo" path="res://player.png" id="1_dxojo"]
+[ext_resource type="Texture2D" uid="uid://7xpk2wmct1i1" path="res://assets/player.png" id="1_dxojo"]
 [ext_resource type="Script" path="res://Player.cs" id="1_jguyb"]
-[ext_resource type="PackedScene" uid="uid://dkukr41kc5510" path="res://circle.tscn" id="3_gxs53"]
-[ext_resource type="PackedScene" uid="uid://cv72h1v8dn725" path="res://enemy.tscn" id="3_wvibl"]
+[ext_resource type="PackedScene" uid="uid://dep46fnlhllm" path="res://circle.tscn" id="3_gxs53"]
+[ext_resource type="PackedScene" uid="uid://cc45oby0u7gc6" path="res://enemy.tscn" id="3_wvibl"]
 [ext_resource type="Script" path="res://Spawner.cs" id="4_5phv8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68m0s"]
